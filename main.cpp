@@ -43,7 +43,21 @@ int main() {
     int choice;
     string s, l, p;
 
-    
+     while (true) 
+    {
+        cout << "\n1. Добавить пароль\n2. Показать все\n3. Выход\nВыбор: ";
+        cin >> choice;
+        if (choice == 1) {
+            cout << "Сервис: "; cin >> s;
+            cout << "Логин: ";  cin >> l;
+            cout << "Пароль: "; cin >> p;
+            vault.savePassword(s, l, p);
+        }
+        else if (choice == 2) {
+            vault.showPasswords();
+        }
+        else break;
+    }
 
     return 0;
 }
