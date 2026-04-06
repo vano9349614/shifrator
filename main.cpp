@@ -24,5 +24,18 @@ private:
         }
     }
 
+    void showPasswords() 
+    {
+        ifstream file("vault.txt");
+        string s, l, p;
+        cout << "\n--- Твои сохраненные пароли ---\n";
+        while (file >> s >> l >> p) {
+            cout << "Сервис: " << crypt(s)
+                 << " | Логин: " << crypt(l)
+                 << " | Пароль: " << crypt(p) << endl;
+        }
+        file.close();
+    }
+};
     return 0;
 }
