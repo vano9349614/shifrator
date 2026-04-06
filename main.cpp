@@ -37,5 +37,13 @@ private:
         file.close();
     }
 };
+int main() {
+    setlocale(LC_ALL, "Russian");
+    PasswordManager vault;
+    int choice;
+    string s, l, p;
+
+    
+
     return 0;
 }
